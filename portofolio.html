@@ -1,0 +1,1358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Raihan Ramadhan - Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="icon" href="images\LogoPorto.png" type="image/png"/>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  </head>
+
+  <style>
+  .success-animation {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+}
+
+.success-checkmark {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+.success-checkmark .check-icon {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  border-radius: 50%;
+  box-sizing: content-box;
+  border: 4px solid #4caf50;
+}
+
+.success-checkmark .check-icon::before {
+  top: 3px;
+  left: -2px;
+  width: 30px;
+  transform-origin: 100% 50%;
+  border-radius: 100px 0 0 100px;
+}
+
+.success-checkmark .check-icon::after {
+  top: 0;
+  left: 30px;
+  width: 60px;
+  transform-origin: 0 50%;
+  border-radius: 0 100px 100px 0;
+  animation: rotate-circle 4.25s ease-in;
+}
+
+.success-checkmark .check-icon::before,
+.success-checkmark .check-icon::after {
+  content: "";
+  height: 100px;
+  position: absolute;
+  background: #ffffff;
+  transform: rotate(-45deg);
+}
+
+.success-checkmark .check-icon .icon-line {
+  height: 5px;
+  background-color: #4caf50;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 10;
+}
+
+.success-checkmark .check-icon .icon-line.line-tip {
+  top: 46px;
+  left: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+  animation: icon-line-tip 0.75s;
+}
+
+.success-checkmark .check-icon .icon-line.line-long {
+  top: 38px;
+  right: 8px;
+  width: 47px;
+  transform: rotate(-45deg);
+  animation: icon-line-long 0.75s;
+}
+
+.success-checkmark .check-icon .icon-circle {
+  top: -4px;
+  left: -4px;
+  z-index: 10;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  position: absolute;
+  box-sizing: content-box;
+  border: 4px solid rgba(76, 175, 80, 0.5);
+}
+
+.success-checkmark .check-icon .icon-fix {
+  top: 8px;
+  width: 5px;
+  left: 26px;
+  z-index: 1;
+  height: 85px;
+  position: absolute;
+  transform: rotate(-45deg);
+  background-color: #ffffff;
+}
+  </style>
+
+  <body>
+
+    <!-- Navigation Bar HTML -->
+<nav class="main-nav">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="#" class="logo-text">Portofolio</a>
+    </div>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">
+        <!-- <span class="nav-icon"><i class="fas fa-user"></i></span> -->
+        <span class="nav-text">About</span>
+      </a>
+      <a href="#education" class="nav-link">
+        <!-- <span class="nav-icon"><i class="fas fa-graduation-cap"></i></span> -->
+        <span class="nav-text">Education</span>
+      </a>
+      <a href="#experience" class="nav-link">
+        <!-- <span class="nav-icon"><i class="fas fa-graduation-cap"></i></span> -->
+        <span class="nav-text">Experience</span>
+      </a>
+      <a href="#skills" class="nav-link">
+        <!-- <span class="nav-icon"><i class="fas fa-chart-bar"></i></span> -->
+        <span class="nav-text">Skills</span>
+      </a>
+      <a href="#project" class="nav-link">
+        <!-- <span class="nav-icon"><i class="fas fa-code"></i></span> -->
+        <span class="nav-text">Projects</span>
+      </a>
+      <a href="#certificates" class="nav-link">
+        <span class="nav-text">Certificates</span>
+      </a>
+      <a href="#contact" class="nav-link">
+        <!-- <span class="nav-icon"><i class="fas fa-envelope"></i></span> -->
+        <span class="nav-text">Contact</span>
+      </a>
+      <div class="nav-indicator"></div>
+    </div>
+  </div>
+</nav>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img
+          src="images\profil.jpg"
+          alt="Muhammad Raihan Ramadhan"
+          class="profile-pic"
+        />
+        <div class="hero-text">
+          <h1>Muhammad Raihan Ramadhan</h1>
+          <p>Information System Student</p>
+          <div class="social-links">
+            <a href="mailto:muhammadraihan291003@gmail.com" title="Email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+6282112780864" title="Phone">
+              <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://github.com/raihanrama" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/muhammad-raihan-ramadhan-3735b5293/" title="LinkedIn">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id = "about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="photo-frame">
+            <div class="frame-border">
+              <img
+                src="images\about.jpeg"
+                alt="Muhammad Raihan Ramadhan"
+                class="about-photo"
+              />
+              <div class="frame-overlay"></div>
+            </div>
+          </div>
+          <div class="about-text">
+            <p>
+              Student of Information Systems with a GPA of 3.78, currently in
+              the 7th semester at Gunadarma University. Passionate about
+              information technology with a strong interest in Web Development,
+              Data Engineering, and Machine Learning. Proficient in PHP, SQL,
+              Java, Python, and Microsoft Office. Eager to learn new things,
+              with the ability to work both individually and in a team.
+              Possesses a growth mindset, critical thinking skills, high sense
+              of responsibility, and excellent time management.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Education Section -->
+        <section id = "education" class="education" style="background: white;">
+          <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-card">
+              <div class="education-content">
+                <div class="education-logo">
+                  <img
+                    src="images\Gundar.jpg"
+                    alt="Gunadarma University Logo"
+                    class="institution-logo"
+                  />
+                </div>
+                <div class="education-details">
+                  <div class="education-header">
+                    <div>
+                      <h3>Gunadarma University</h3>
+                      <p>Information Systems</p>
+                    </div>
+                    <p class="education-year">2021-Present</p>
+                  </div>
+                  <p class="education-description">
+                    Learning about information systems with in-depth study of
+                    business understanding integrated with technology such as
+                    becoming an analyst who can make the right decisions according
+                    to business needs.
+                  </p>
+                  <div class="education-stats">
+                    <div class="stat-item">
+                      <i class="fas fa-graduation-cap"></i>
+                      <span>GPA: 3.80</span>
+                    </div>
+                    <div class="stat-item">
+                      <i class="fas fa-clock"></i>
+                      <span>7th Semester</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="education-card">
+              <div class="education-content">
+                <div class="education-logo">
+                  <img
+                    src="images\bangkit.png"
+                    alt="Bangkit Academy Logo"
+                    class="institution-logo"
+                  />
+                </div>
+                <div class="education-details">
+                  <div class="education-header">
+                    <div>
+                      <h3>Bangkit Academy</h3>
+                      <p>led by Google, Tokopedia, Gojek, and Traveloka</p>
+                    </div>
+                    <p class="education-year">Jan 2024-Jul 2024</p>
+                  </div>
+                  <p class="education-description">
+                    Learn about machine learning starting from data analysis using
+                    Python to using TensorFlow to create a model.
+                  </p>
+                  <div class="partners">
+                    <span class="partner-label">Powered by:</span>
+                    <div class="partner-logos">
+                      <i class="fab fa-google" title="Google"></i>
+                      <span class="partner-divider">|</span>
+                      <span class="partner-text">Tokopedia</span>
+                      <span class="partner-divider">|</span>
+                      <span class="partner-text">Gojek</span>
+                      <span class="partner-divider">|</span>
+                      <span class="partner-text">Traveloka</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience Section -->
+<section id="experience" class="experience" style="background: white;">
+  <div class="container">
+    <h2 class="section-title">Experience</h2>
+
+            <!-- BSN Proggramer Experience -->
+            <div class="experience-card">
+              <div class="experience-content">
+                <div class="experience-logo">
+                  <img
+                    src="images\BSN.jpeg"
+                    alt="BSN Logo"
+                    class="institution-logo"
+                  />
+                </div>
+                <div class="experience-details">
+                  <div class="experience-header">
+                    <div>
+                      <h3>Proggramer</h3>
+                      <p>Badan Standardisasi Nasional</p>
+                    </div>
+                    <p class="experience-year">Feb 2025-Present</p>
+                  </div>
+                  <div class="experience-description">
+                    <p>Internships are carried out from February. where the internship is carried out for at least 4 months with the tasks assigned including:</p>
+                    <ul class="experience-points">
+                      <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Create a website to let users know what time it is in each time section starting from WIB, WITA, and WIT by using NTP from BSN.</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Create machine learning models to make predictions regarding the stability of atomic time clocks</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check-circle"></i>
+                        <span>Assist with other tasks and needs</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+    <!-- Laboratory Assistant Experience -->
+    <div class="experience-card">
+      <div class="experience-content">
+        <div class="experience-logo">
+          <img
+            src="images\labsi.png"
+            alt="Laboratory Logo"
+            class="institution-logo"
+          />
+        </div>
+        <div class="experience-details">
+          <div class="experience-header">
+            <div>
+              <h3>Laboratory Assistant</h3>
+              <p>Information Systems Laboratory</p>
+            </div>
+            <p class="experience-year">2023-Present</p>
+          </div>
+          <div class="experience-description">
+            <p>Create questions for practitioners with a practical eye (PHP) and (ORACLE) and prepare initial and final assignments as well as activity assignments.</p>
+            <ul class="experience-points">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Create questions for practitioners with a practical eye (ORACLE) and prepare initial and final assignments as well as activity assignments.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Correct and assess the assignments carried out by the practicum during the practicum.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Collaborated with senior lecturers to improve laboratory curriculum</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PIC Shift Experience -->
+    <div class="experience-card">
+      <div class="experience-content">
+        <div class="experience-logo">
+          <img
+            src="images\labsi.png"
+            alt="PIC Shift Logo"
+            class="institution-logo"
+          />
+        </div>
+        <div class="experience-details">
+          <div class="experience-header">
+            <div>
+              <h3>PIC Shift</h3>
+              <p>Information Systems Department</p>
+            </div>
+            <p class="experience-year">2024-Present</p>
+          </div>
+          <div class="experience-description">
+            <p>Person In Charge for managing and coordinating laboratory shift schedules.</p>
+            <ul class="experience-points">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Provide clear instructions to all assistants so that they can understand the practicum tasks and run the practicum effectively each week. 
+                </span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Serve as an information liaison between 60 assistants and also information systems laboratory staff.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Assist assistants in preparing practicum assignments so that they can begin immediately, such as preparing practicum needs and distributing materials.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Handled emergency substitutions and schedule adjustments</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Volunteer Fikti Space Experience -->
+    <div class="experience-card">
+      <div class="experience-content">
+        <div class="experience-logo">
+          <img
+            src="images\Bem.png"
+            alt="Fikti Space Logo"
+            class="institution-logo"
+          />
+        </div>
+        <div class="experience-details">
+          <div class="experience-header">
+            <div>
+              <h3>Volunteer</h3>
+              <p>Fikti Space</p>
+            </div>
+            <p class="experience-year">2023</p>
+          </div>
+          <div class="experience-description">
+            <p>Volunteered in Fikti Space organization contributing to various community initiatives.</p>
+            <ul class="experience-points">
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Determine product ideas for fund infusion and become a customer service center.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Market the product during the event to increase revenue.</span>
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i>
+                <span>Backing up other divisions when the main activities are carried out</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Skills Section -->
+    <section id = "skills" class="skills">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h3>Soft Skills</h3>
+            <div class="skill-item">
+              <i class="fas fa-comments skill-icon"></i>
+              <div class="skill-info">
+                <p>Public Speaking</p>
+                <div class="progress-bar">
+                  <div
+                    class="progress"
+                    style="width: 90%"
+                    data-tooltip="90%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">90%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-clock skill-icon"></i>
+              <div class="skill-info">
+                <p>Time Management</p>
+                <div class="progress-bar">
+                  <div
+                    class="progress"
+                    style="width: 95%"
+                    data-tooltip="95%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">95%</span>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-brain skill-icon"></i>
+              <div class="skill-info">
+                <p>Critical Thinking</p>
+                <div class="progress-bar">
+                  <div
+                    class="progress"
+                    style="width: 90%"
+                    data-tooltip="90%"
+                  ></div>
+                </div>
+                <span class="skill-percentage">90%</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="skill-category">
+            <h3>Hard Skills</h3>
+            <div class="skill-item">
+              <i class="fab fa-php skill-icon"></i>
+              <div class="skill-info">
+                <p>PHP</p>
+                <div class="progress-container">
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 100%"></div>
+                  </div>
+                  <div class="skill-levels">
+                    <span class="level">Fundamental</span>
+                    <span class="level">Beginner</span>
+                    <span class="level active">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fas fa-database skill-icon"></i>
+              <div class="skill-info">
+                <p>SQL</p>
+                <div class="progress-container">
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 100%"></div>
+                  </div>
+                  <div class="skill-levels">
+                    <span class="level">Fundamental</span>
+                    <span class="level">Beginner</span>
+                    <span class="level active">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-python skill-icon"></i>
+              <div class="skill-info">
+                <p>Python</p>
+                <div class="progress-container">
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 50%"></div>
+                  </div>
+                  <div class="skill-levels">
+                    <span class="level">Fundamental</span>
+                    <span class="level active">Beginner</span>
+                    <span class="level">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <i class="fab fa-java skill-icon"></i>
+              <div class="skill-info">
+                <p>Java</p>
+                <div class="progress-container">
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 50%"></div>
+                  </div>
+                  <div class="skill-levels">
+                    <span class="level">Fundamental</span>
+                    <span class="level active">Beginner</span>
+                    <span class="level">Intermediate</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id = "project" class="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+          <!-- Gunadarma Project Card -->
+          <div class="project-card">
+            <img
+              src="images\Gunadarma.png"
+              alt="Administrasi Gunadarma University Website"
+              class="project-image"
+            />
+            <div class="project-content">
+              <div class="project-year">2024</div>
+              <h3>Gunadarma University Website</h3>
+              <p>
+                Designing an interactiv website on the Gunadarma
+                University which is the final project for pengolahan projek sistem informasi.
+              </p>
+              <button
+                class="see-more-btn"
+                onclick="openModal('gunadarma-modal')"
+              >
+                See More
+              </button>
+            </div>
+          </div>
+
+          <!-- Loba Laba Project Card -->
+          <div class="project-card">
+            <img
+              src="images\loba-laba.png"
+              alt="PT. Aneka Loba Laba Company Profile"
+              class="project-image"
+            />
+            <div class="project-content">
+              <div class="project-year">2024</div>
+              <h3>PT. Aneka Loba Laba Company Profile</h3>
+              <p>
+                Trusted to create a website display, namely a company profile
+                website for a company engaged in the installation of electronic
+                equipment services.
+              </p>
+              <button
+                class="see-more-btn"
+                onclick="openModal('lobalaba-modal')"
+              >
+                See More
+              </button>
+            </div>
+          </div>
+
+          <!-- Analytics Dashboard Project Card -->
+          <div class="project-card">
+            <img
+              src="images\treamlit.png"
+              alt="Data Analytics Dashboard"
+              class="project-image"
+            />
+            <div class="project-content">
+              <div class="project-year">2024</div>
+              <h3>Data Analytics Dashboard</h3>
+              <p>
+                Analyze data from cleaning data to visualizing and then creating
+                a simple dashboard using streamlit and python language.
+              </p>
+              <button
+                class="see-more-btn"
+                onclick="openModal('dashboard-modal')"
+              >
+                See More
+              </button>
+            </div>
+          </div>
+          <div class="project-card">
+            <img
+              src="images\Looker1.png" 
+              alt="Dashboard Projek"
+              class="project-image"
+            />
+            <div class="project-content">
+              <div class="project-year">2024</div>
+              <h3>Create Simple Dashboard With LookerStudio</h3>
+              <p>
+                Create a simple dashboard using lookerstudio from a pre-processed dataset using python programming language.
+              </p>
+              <button
+                class="see-more-btn"
+                onclick="openModal('ml-modal')"
+              >
+                See More
+              </button>
+            </div>
+          </div>
+          
+          <!-- Mobile App Project Card -->
+          <div class="project-card">
+            <img
+              src="images\Emoqu4.png"
+              alt="Emoqu Application"
+              class="project-image"
+            />
+            <div class="project-content">
+              <div class="project-year">2024</div>
+              <h3>Emoqu Application</h3>
+              <p>
+                Developed a mobile application to track the user's mood condition based on the user's activities and mood condition, where this application is an implementation of 3 learning paths namely machine learning, cloud computing and mobile development.
+              </p>
+              <button
+                class="see-more-btn"
+                onclick="openModal('mobile-modal')"
+              >
+                See More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Templates -->
+      <div id="gunadarma-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal('gunadarma-modal')"
+            >&times;</span
+          >
+          <h2>Gunadarma University Website UI</h2>
+            <div class="project-slider">
+              <div class="slides">
+                <img src="images\Gunadarma.png" alt="Project Image 1" />
+                <img src="images\Gundar2.png" alt="Project Image 2" />
+                <img src="images\Gundar3.png" alt="Project Image 3" />
+              </div>
+              <button
+                class="slider-btn prev"
+                onclick="slideImage('gunadarma-modal', -1)"
+              >
+                ❮
+              </button>
+              <button
+                class="slider-btn next"
+                onclick="slideImage('gunadarma-modal', 1)"
+              >
+                ❯
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="lobalaba-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal('lobalaba-modal')"
+            >&times;</span
+          >
+          <h2>PT. Aneka Loba Laba Company Profile</h2>
+            <div class="project-slider">
+              <div class="slides">
+                <img src="images\loba-laba.png" alt="Project Image 1" />
+                <img src="images\loba-laba2.png" alt="Project Image 2" />
+                <img src="images\loba-laba3.png" alt="Project Image 3" />
+              </div>
+              <button
+                class="slider-btn prev"
+                onclick="slideImage('lobalaba-modal', -1)"
+              >
+                ❮
+              </button>
+              <button
+                class="slider-btn next"
+                onclick="slideImage('lobalaba-modal', 1)"
+              >
+                ❯
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="dashboard-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal('dashboard-modal')"
+            >&times;</span
+          >
+          <h2>Data Analytics Dashboard</h2>
+            <div class="project-slider">
+              <div class="slides">
+                <img src="images\treamlit.png" alt="Project Image 1" />
+              </div>
+              <button
+                class="slider-btn prev"
+                onclick="slideImage('dashboard-modal', -1)"
+              >
+                ❮
+              </button>
+              <button
+                class="slider-btn next"
+                onclick="slideImage('dashboard-modal', 1)"
+              >
+                ❯
+              </button>
+            </div>
+          </div>
+        </div>
+        <div id="ml-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('ml-modal')"
+              >&times;</span
+            >
+            <h2>Data Analytics Dashboard</h2>
+              <div class="project-slider">
+                <div class="slides">
+                  <img src="images\Looker1.png" alt="Project Image 1" />
+                  <img src="images\Looker2.png" alt="Project Image 1" />
+                </div>
+                <button
+                  class="slider-btn prev"
+                  onclick="slideImage('ml-modal', -1)"
+                >
+                  ❮
+                </button>
+                <button
+                  class="slider-btn next"
+                  onclick="slideImage('ml-modal', 1)"
+                >
+                  ❯
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="mobile-modal" class="modal">
+          <div class="modal-content">
+            <span class="close-btn" onclick="closeModal('mobile-modal')">&times;</span>
+            <h2>Emoqu Application</h2>
+            <div class="project-slider">
+              <div class="slides">
+                <img src="images\Emoquu.png" alt="ML Project Image 1" />
+                <img src="images\Emoqu1.png" alt="ML Project Image 2" />
+                <img src="images\Emoqu2.png" alt="ML Project Image 3" />
+                <img src="images\Emoqu3.png" alt="ML Project Image 4" />
+              </div>
+              <button
+                class="slider-btn prev"
+                onclick="slideImage('mobile-modal', -1)"
+              >
+                ❮
+              </button>
+              <button
+                class="slider-btn next"
+                onclick="slideImage('mobile-modal', 1)"
+              >
+                ❯
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Certificates Section -->
+<section id="certificates" class="certificates" style="background: var(--light-bg); padding: 4rem 2rem;">
+  <div class="container">
+    <h2 class="section-title">Certificates</h2>
+    <div class="certificates-grid">
+      <!-- Certificate Card 1 -->
+      <div class="certificate-card">
+        <div class="certificate-preview">
+          <embed src="Sertifikat\[Bangkit 2024 Batch 1] Certificate - M009D4KY2351.pdf" type="application/pdf" width="100%" height="200px" />
+          <div class="certificate-overlay">
+            <button class="view-btn" onclick="openCertModal('[Bangkit 2024 Batch 1] Certificate - M009D4KY2351.pdf')">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="certificate-info">
+          <h3>Bangkit Academy Distinction</h3>
+          <p>Issued by: Bangkit Academy</p>
+          <p class="cert-date">2024</p>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-preview">
+          <embed src="Sertifikat\generative AI.pdf" type="application/pdf" width="100%" height="200px" />
+          <div class="certificate-overlay">
+            <button class="view-btn" onclick="openCertModal('generative AI.pdf')">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="certificate-info">
+          <h3>Generative AI for Everyone</h3>
+          <p>Issued by: DeepLearning.AI</p>
+          <p class="cert-date">2024</p>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-preview">
+          <embed src="Sertifikat\Mathematics for Machine.pdf" type="application/pdf" width="100%" height="200px" />
+          <div class="certificate-overlay">
+            <button class="view-btn" onclick="openCertModal('Mathematics for Machine.pdf')">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="certificate-info">
+          <h3>Mathematics for Machine
+            Learning and Data
+            Science
+            </h3>
+          <p>Issued by: DeepLearning.AI</p>
+          <p class="cert-date">2024</p>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-preview">
+          <embed src="Sertifikat\Machine Learning.pdf" type="application/pdf" width="100%" height="200px" />
+          <div class="certificate-overlay">
+            <button class="view-btn" onclick="openCertModal('Machine Learning.pdf')">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="certificate-info">
+          <h3>Machine Learning</h3>
+          <p>Issued by: Stanford University</p>
+          <p class="cert-date">2024</p>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-preview">
+          <embed src="Sertifikat\DeepLearning.AI.pdf" type="application/pdf" width="100%" height="200px" />
+          <div class="certificate-overlay">
+            <button class="view-btn" onclick="openCertModal('DeepLearning.AI.pdf')">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="certificate-info">
+          <h3>DeepLearning.AI
+            TensorFlow Developer
+            </h3>
+          <p>Issued by: DeepLearning.AI</p>
+          <p class="cert-date">2024</p>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-preview">
+          <embed src="Sertifikat\TensorFlow Data and.pdf" type="application/pdf" width="100%" height="200px" />
+          <div class="certificate-overlay">
+            <button class="view-btn" onclick="openCertModal('TensorFlow Data and.pdf')">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="certificate-info">
+          <h3>TensorFlow: Data and
+            Deployment</h3>
+          <p>Issued by: DeepLearning.AI</p>
+          <p class="cert-date">2024</p>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-preview">
+          <embed src="Sertifikat\Data Scientis.pdf" type="application/pdf" width="100%" height="200px" />
+          <div class="certificate-overlay">
+            <button class="view-btn" onclick="openCertModal('Data Scientis.pdf')">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="certificate-info">
+          <h3>Mathematics for Machine
+            Learning and Data
+            Science</h3>
+          <p>Issued by: DeepLearning.AI</p>
+          <p class="cert-date">2024</p>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-preview">
+          <embed src="Sertifikat\Process Data from Dirty to Clean.pdf" type="application/pdf" width="100%" height="200px" />
+          <div class="certificate-overlay">
+            <button class="view-btn" onclick="openCertModal('Process Data from Dirty to Clean.pdf')">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="certificate-info">
+          <h3>Process Data from Dirty to Clean
+          </h3>
+          <p>Issued by: Google</p>
+          <p class="cert-date">2024</p>
+        </div>
+      </div>
+      <div class="certificate-card">
+        <div class="certificate-preview">
+          <embed src="Sertifikat\Using Python to Interact with the Operating.pdf" type="application/pdf" width="100%" height="200px" />
+          <div class="certificate-overlay">
+            <button class="view-btn" onclick="openCertModal('Using Python to Interact with the Operating.pdf')">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="certificate-info">
+          <h3>Using Python to Interact with the Operating
+            System            
+          </h3>
+          <p>Issued by: Google</p>
+          <p class="cert-date">2024</p>
+        </div>
+      </div>
+      
+
+    </div>
+  </div>
+
+  <!-- Certificate Modal -->
+  <div id="certModal" class="cert-modal">
+    <div class="cert-modal-content">
+      <span class="cert-close-btn">&times;</span>
+      <embed id="modalCertificate" src="" type="application/pdf" width="100%" height="100%" />
+    </div>
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <div class="container">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="contact-wrapper">
+      <div class="contact-info">
+        <h3>Let's Connect!</h3>
+        <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, feel free to contact me!</p>
+        
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email</h4>
+              <a href="mailto:muhammadraihan291003@gmail.com">muhammadraihan291003@gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Phone</h4>
+              <a href="tel:+6282112780864">+62 821-1278-0864</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Location</h4>
+              <p>Bekasi, Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-connect">
+          <h4>Follow Me On</h4>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/muhammad-raihan-ramadhan-3735b5293/" class="social-icon" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/raihanrama" class="social-icon" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.instagram.com/raihan.rndm?igsh=MXU3YnBwYWlmbnU4bg%3D%3D&utm_source=qr" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send Me a Message</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <input type="text" id="name">
+            <label for="name">Name</label>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" id="email">
+            <label for="email">Email</label>
+          </div>
+          
+          <div class="form-group">
+            <input type="text" id="subject">
+            <label for="subject">Subject</label>
+          </div>
+          
+          <div class="form-group">
+            <textarea id="message"></textarea>
+            <label for="message">Message</label>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </body>
+</html>
+<script>
+  // Modal Functions
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+
+  // Image Slider Functions
+  const sliders = {};
+
+  function initializeSlider(modalId) {
+    const modal = document.getElementById(modalId);
+    const slides = modal.querySelector(".slides");
+    const images = slides.getElementsByTagName("img");
+
+    sliders[modalId] = {
+      currentSlide: 0,
+      totalSlides: images.length,
+    };
+
+    // Set initial position
+    updateSlidePosition(modalId);
+  }
+
+  function slideImage(modalId, direction) {
+    const slider = sliders[modalId];
+    slider.currentSlide =
+      (slider.currentSlide + direction + slider.totalSlides) %
+      slider.totalSlides;
+    updateSlidePosition(modalId);
+  }
+
+  function updateSlidePosition(modalId) {
+    const modal = document.getElementById(modalId);
+    const slides = modal.querySelector(".slides");
+    const currentSlide = sliders[modalId].currentSlide;
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  // Initialize all sliders when the page loads
+  document.addEventListener("DOMContentLoaded", () => {
+    ["gunadarma-modal", "lobalaba-modal", "dashboard-modal"].forEach(
+      (modalId) => {
+        initializeSlider(modalId);
+      }
+    );
+  });
+
+  // Close modal when clicking outside
+  window.onclick = function (event) {
+    if (event.target.classList.contains("modal")) {
+      event.target.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  };
+
+  // Smooth scrolling for navigation links
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const targetId = link.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
+    
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+    }
+  });
+});
+
+// Active link indicator and scroll effects
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+const nav = document.querySelector('.main-nav');
+const indicator = document.querySelector('.nav-indicator');
+
+function updateNavigation() {
+  const scrollY = window.scrollY + 100;
+  
+  // Update nav background on scroll
+  if (scrollY > 100) {
+    nav.classList.add('scrolled');
+  } else {
+    nav.classList.remove('scrolled');
+  }
+  
+  // Update active link
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    const sectionBottom = sectionTop + section.offsetHeight;
+    
+    if (scrollY >= sectionTop && scrollY < sectionBottom) {
+      const currentId = section.getAttribute('id');
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentId}`) {
+          link.classList.add('active');
+          
+          // Update indicator position
+          const linkRect = link.getBoundingClientRect();
+          indicator.style.width = `${linkRect.width}px`;
+          indicator.style.left = `${linkRect.left}px`;
+          indicator.style.opacity = '1';
+        }
+      });
+    }
+  });
+}
+
+window.addEventListener('scroll', updateNavigation);
+window.addEventListener('resize', updateNavigation);
+document.addEventListener('DOMContentLoaded', updateNavigation);
+
+// Certificate Modal Functions
+function openCertModal(certId) {
+  const modal = document.getElementById('certModal');
+  const modalEmbed = document.getElementById('modalCertificate');
+  
+  // Set the source based on certId
+  modalEmbed.src = `Sertifikat/${certId}`;
+  modal.style.display = 'block';
+  document.body.style.overflow = 'hidden';
+  
+  // Add animation class
+  modal.classList.add('modal-open');
+}
+
+// Close modal when clicking the close button
+document.querySelector('.cert-close-btn').onclick = function() {
+  closeCertModal();
+}
+
+// Close modal when clicking outside
+window.onclick = function(event) {
+  const modal = document.getElementById('certModal');
+  if (event.target == modal) {
+    closeCertModal();
+  }
+}
+
+// Close modal function
+function closeCertModal() {
+  const modal = document.getElementById('certModal');
+  modal.style.display = 'none';
+  document.body.style.overflow = 'auto';
+  document.getElementById('modalCertificate').src = '';
+}
+
+// Escape key to close modal
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeCertModal();
+  }
+});
+
+// Inisialisasi EmailJS
+// Ganti "YOUR_PUBLIC_KEY" dengan public key EmailJS Anda
+emailjs.init("HVWTmQ13-Ruddv5br");
+
+// Fungsi untuk menampilkan animasi sukses
+function showSuccessAnimation() {
+  // Buat container untuk animasi
+  const successContainer = document.createElement('div');
+  successContainer.className = 'success-animation';
+  successContainer.innerHTML = `
+    <div class="success-checkmark">
+      <div class="check-icon">
+        <span class="icon-line line-tip"></span>
+        <span class="icon-line line-long"></span>
+        <div class="icon-circle"></div>
+        <div class="icon-fix"></div>
+      </div>
+      <h3>Message Sent Successfully!</h3>
+    </div>
+  `;
+  document.body.appendChild(successContainer);
+
+  // Animasi menggunakan GSAP
+  gsap.from('.success-checkmark', {
+    scale: 0.5,
+    opacity: 0,
+    duration: 0.5,
+    ease: "back.out(1.7)"
+  });
+
+  // Hapus animasi setelah 3 detik
+  setTimeout(() => {
+    gsap.to('.success-animation', {
+      opacity: 0,
+      duration: 0.3,
+      onComplete: () => successContainer.remove()
+    });
+  }, 3000);
+}
+
+// Handle form submission
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  // Ambil nilai dari form
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  // Tampilkan loading state pada tombol
+  const submitBtn = document.querySelector('.submit-btn');
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+  submitBtn.disabled = true;
+
+  // Kirim email menggunakan EmailJS
+  // Ganti "YOUR_SERVICE_ID" dan "YOUR_TEMPLATE_ID" dengan ID dari EmailJS
+  emailjs.send("service_re8m02p", "template_t27xcne", {
+    from_name: name,
+    from_email: email,
+    subject: subject,
+    message: message,
+    to_email: "muhammadraihan291003@gmail.com"
+  }).then(
+    function(response) {
+      console.log("SUCCESS", response);
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+      
+      // Reset form
+      document.getElementById('contactForm').reset();
+      
+      // Tampilkan animasi sukses
+      showSuccessAnimation();
+    },
+    function(error) {
+      console.log("FAILED", error);
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+      alert("Failed to send message. Please try again.");
+    }
+  );
+});
+
+</script>

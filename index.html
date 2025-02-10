@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Muhammad Raihan Ramadhan</title>
+    <link rel="icon" href="images\LogoPorto.png" type="image/png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #0a192f;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+        font-family: "Arial", sans-serif;
+      }
+
+      .container {
+        text-align: center;
+        position: relative;
+        z-index: 2; /* Ensure content stays above logos */
+        width: 100%;
+        max-width: 800px; /* Limit maximum width */
+        padding: 0 20px; /* Add some padding on sides */
+      }
+
+      .logo-container {
+        position: fixed; /* Change to fixed position */
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1; /* Put logos behind content */
+        pointer-events: none; /* Prevent logos from interfering with clicks */
+      }
+
+      .tech-logo {
+        position: absolute;
+        font-size: 2rem;
+        color: #64ffda;
+        opacity: 0;
+        animation: float 8s linear infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translate(0, 0) rotate(0deg);
+          opacity: 0;
+        }
+        10% {
+          opacity: 0.8;
+        }
+        90% {
+          opacity: 0.8;
+        }
+        100% {
+          transform: translate(var(--moveX), var(--moveY)) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      .content-wrapper {
+        position: relative;
+        z-index: 2;
+        background: rgba(10, 25, 47, 0.7); /* Semi-transparent background */
+        padding: 2rem;
+        border-radius: 8px;
+      }
+
+      .name-container {
+        margin-bottom: 2rem;
+      }
+
+      .name {
+        font-size: 2.5rem;
+        color: #64ffda;
+        position: relative;
+        display: inline-block;
+        margin: 0 auto;
+      }
+
+      .name span {
+        position: relative;
+        display: inline-block;
+        color: #64ffda;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      .name span.animate {
+        animation: revealText 0.5s ease forwards;
+        animation-delay: calc(0.1s * var(--char-index));
+      }
+
+      .typing-text {
+        font-size: 1.5rem;
+        color: #64ffda;
+        margin-top: 1rem;
+        min-height: 2.5rem;
+        position: relative;
+      }
+
+      .typing-text::after {
+        content: "|";
+        position: absolute;
+        right: -8px;
+        animation: blink 0.7s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes revealText {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .enter-button {
+        margin-top: 3rem;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        background: transparent;
+        color: #64ffda;
+        border: 2px solid #64ffda;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+        animation-delay: 3s;
+      }
+
+      .enter-button:hover {
+        background: rgba(100, 255, 218, 0.1);
+      }
+
+      @keyframes fadeIn {
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logo-container" id="logoContainer"></div>
+    <div class="container">
+      <div class="content-wrapper">
+        <div class="name-container">
+          <h1 class="name" id="name"></h1>
+        </div>
+        <div class="typing-text" id="typingText"></div>
+        <button
+          class="enter-button"
+          onclick="window.location.href='portofolio.html'"
+        >
+          Enter Portfolio
+        </button>
+      </div>
+    </div>
+
+    <script>
+      // Function to create floating logos
+      function createFloatingLogo(icon, delay = 0) {
+        const logo = document.createElement("i");
+        logo.className = `tech-logo ${icon}`;
+
+        const startX = Math.random() * window.innerWidth;
+        const startY = Math.random() * window.innerHeight;
+        const moveX = (Math.random() - 0.5) * 400;
+        const moveY = (Math.random() - 0.5) * 400;
+
+        logo.style.cssText = `
+          left: ${startX}px;
+          top: ${startY}px;
+          --moveX: ${moveX}px;
+          --moveY: ${moveY}px;
+          animation-delay: ${delay}s;
+        `;
+
+        document.getElementById("logoContainer").appendChild(logo);
+
+        setTimeout(() => {
+          logo.remove();
+          createFloatingLogo(icon, 0);
+        }, 8000 + delay * 1000);
+      }
+
+      const logos = [
+        "fab fa-github",
+        "fab fa-php",
+        "fab fa-python",
+        "fas fa-database",
+        "fab fa-linkedin",
+        "fab fa-figma",
+        "fab fa-java",
+        "fab fa-react",
+        "fab fa-node",
+        "fab fa-js",
+        "fab fa-html5",
+        "fab fa-css3",
+      ];
+
+      logos.forEach((logo) => {
+        for (let i = 0; i < 5; i++) {
+          createFloatingLogo(logo, i * 1.5);
+        }
+      });
+
+      // Name animation - simplified
+      const nameContainer = document.getElementById("name");
+      const nameText = "Muhammad Raihan Ramadhan";
+
+      function animateName() {
+        nameContainer.innerHTML = nameText
+          .split("")
+          .map(
+            (char, index) =>
+              `<span style="--char-index: ${index}" class="animate">${char}</span>`
+          )
+          .join("");
+      }
+
+      // Typing animation
+      const phrases = [
+        "Welcome!",
+        "I'm a Web Developer!",
+        "I'm a Machine Learning Engineer!",
+      ];
+
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      const typingDelay = 100;
+      const deletingDelay = 50;
+      const phraseDelay = 2000;
+
+      function typeText() {
+        const currentPhrase = phrases[phraseIndex];
+        const typingTextElement = document.getElementById("typingText");
+
+        if (!isDeleting && charIndex <= currentPhrase.length) {
+          typingTextElement.textContent = currentPhrase.substring(0, charIndex);
+          charIndex++;
+          setTimeout(typeText, typingDelay);
+        } else if (isDeleting && charIndex >= 0) {
+          typingTextElement.textContent = currentPhrase.substring(0, charIndex);
+          charIndex--;
+          setTimeout(typeText, deletingDelay);
+        } else {
+          isDeleting = !isDeleting;
+
+          if (!isDeleting) {
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            setTimeout(typeText, phraseDelay);
+          } else {
+            setTimeout(typeText, typingDelay);
+          }
+
+          charIndex = isDeleting ? currentPhrase.length : 0;
+        }
+      }
+
+      // Start animations
+      window.addEventListener("load", () => {
+        animateName();
+        typeText();
+      });
+    </script>
+  </body>
+</html>
