@@ -28,7 +28,7 @@
 }
 
 section[id] {
-  scroll-margin-top: 5rem; /* Sesuaikan dengan tinggi navbar Anda */
+  scroll-margin-top: 5rem;
 }
 
 .main-nav.scrolled {
@@ -68,13 +68,13 @@ section[id] {
 
 .nav-link {
   text-decoration: none;
-  color: #1e40af; /* Changed to match primary color */
-  padding: 0.75rem 1.25rem; /* Increased padding */
+  color: #1e40af; 
+  padding: 0.75rem 1.25rem;
   border-radius: 8px;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Increased gap */
+  gap: 0.5rem; 
   position: relative;
 }
 
@@ -83,9 +83,9 @@ section[id] {
 }
 
 .nav-link:hover {
-  color: #1d4ed8; /* Changed hover color to secondary color */
+  color: #1d4ed8; 
   transform: translateY(-2px);
-  background: rgba(30, 64, 175, 0.05); /* Added subtle hover background */
+  background: rgba(30, 64, 175, 0.05); 
 }
 
 .nav-link:hover .nav-icon {
@@ -94,8 +94,8 @@ section[id] {
 }
 
 .nav-link.active {
-  color: #1d4ed8; /* Changed active color to secondary color */
-  background: rgba(30, 64, 175, 0.1); /* Added subtle active background */
+  color: #1d4ed8; 
+  background: rgba(30, 64, 175, 0.1); 
 }
 
 .nav-indicator {
@@ -274,8 +274,8 @@ section[id] {
 .experience-content {
   display: flex;
   gap: 2rem;
-  align-items: center; /* Changed from flex-start to center */
-  min-height: 200px; /* Added minimum height to ensure vertical centering */
+  align-items: center; 
+  min-height: 200px; 
 }
 
 .experience-logo {
@@ -289,7 +289,7 @@ section[id] {
   border-radius: 1rem;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  align-self: center; /* Added to ensure logo stays vertically centered */
+  align-self: center;
 }
 
 .experience-logo img {
@@ -305,7 +305,7 @@ section[id] {
 
 .experience-details {
   flex: 1;
-  padding: 1rem 0; /* Added padding to maintain spacing */
+  padding: 1rem 0; 
 }
 
 .experience-header {
@@ -363,7 +363,7 @@ section[id] {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    min-height: auto; /* Remove minimum height on mobile */
+    min-height: auto; 
   }
 
   .experience-logo {
@@ -483,14 +483,12 @@ section[id] {
   transition: width 1s ease-in-out;
 }
 
-/* Add new styles for skill percentages */
 .skill-percentage {
   font-size: 0.875rem;
   color: var(--primary-color);
   font-weight: 600;
 }
 
-/* Add styles for hard skills levels */
 .progress-container {
   width: 100%;
 }
